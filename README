@@ -1,0 +1,32 @@
+Welcome to Apache Crunch!
+=========================
+
+Apache Crunch is a Java library for writing, testing, and running Hadoop
+MapReduce pipelines, based on Google's FlumeJava. Its goal is to make
+pipelines that are composed of many user-defined functions simple to write,
+easy to test, and efficient to run.
+
+For more information please see the website:
+
+  http://crunch.apache.org/
+
+
+Building the Source Code
+------------------------
+
+We recommend Maven 3 and JDK 6 for building Crunch. To build the project
+run the following Maven command:
+
+  mvn package
+
+To run the integration test suite and to install the created JARs in your
+local Maven cache:
+
+  mvn install
+
+Crunch has experimental support for Hadoop 2 through the "hadoop-2" build
+profile (add -Phadoop-2 to enable it). If you want to use HBase support on
+Hadoop 2, please note that you have to build HBase 0.94.1 from source using
+the following command:
+
+  mvn clean install -Dhadoop.profile=2.0
